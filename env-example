@@ -1,0 +1,27 @@
+# Do not put actual passwords in this file
+#
+DEBUG=grammi-api:*
+PORT=3001
+DATABASE_URL=mongodb://127.0.0.1:27017/grammi
+auth0ClientId=test
+auth0ClientSecret=test
+auth0Domain=test
+auth0Connection=test
+resourceServerId=test
+resourceServerIdentifier=test
+AWSAccessKeyId= test
+AWSSecretKey=test
+bucketName= test
+S3FileUploadLimit=test
+stripeKey= test
+stripeSecret= test
+stripeWebhookSecret=tes
+apiVersion=test
+twillioSID=test
+twillioAuthToken=test
+deliveryTime=45
+timeSlotInterval = 15
+redisHost = localhost
+redisPort = 6379
+serviceAccountEnv = test
+twillioServiceId = test

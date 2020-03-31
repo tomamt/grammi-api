@@ -1,0 +1,446 @@
+{
+  "roles": [
+    {
+      "name": "superAdmin",
+      "displayName": "Super Admin",
+      "menus": [
+        {
+          "title": "Users",
+          "icon": "home-outline",
+          "children": [
+            {
+              "title": "Admins",
+              "link": "/pages/users/admins"
+            },
+            {
+              "title": "Vendors",
+              "link": "/pages/users/vendors"
+            },
+            {
+              "title": "Delivery Agents",
+              "link": "/pages/users/delivery-agents"
+            },
+            {
+              "title": "Delivery Managers",
+              "link": "/pages/users/delivery-agent-managers"
+            }
+          ]
+        },
+        {
+          "title": "Payments",
+          "icon": "browser-outline",
+          "children": [
+            {
+              "title": "Manage Payments",
+              "link": "/pages/orders/payments"
+            }
+          ]
+        },
+        {
+          "title": "Orders",
+          "icon": "shopping-cart-outline",
+          "children": [
+            {
+              "title": "Live Orders",
+              "link": "/pages/orders/live-orders"
+            },
+            {
+              "title": "Past Orders",
+              "link": "/pages/orders/past-orders"
+            }
+          ]
+        },
+        {
+          "title": "Coupons",
+          "icon": "message-circle-outline",
+          "children": [
+            {
+              "title": "Manage Coupons",
+              "link": "/pages/orders/coupons"
+            }
+          ]
+        },
+        {
+          "title": "Rating",
+          "icon": "map-outline",
+          "children": [
+            {
+              "title": "Ratings",
+              "link": "/pages/orders/ratings"
+            }
+          ]
+        },
+        {
+          "title": "Alerts",
+          "icon": "shuffle-2-outline",
+          "children": [
+            {
+              "title": "Manage Alerts",
+              "link": "/pages/alerts"
+            }
+          ]
+        },
+        {
+          "title": "Queue",
+          "icon": "grid-outline",
+          "children": [
+            {
+              "title": "Manage Queue",
+              "link": "/pages/orders/manage-queue/null"
+            }
+          ]
+        },
+        {
+          "title": "Analytics",
+          "icon": "pie-chart-outline",
+          "children": [
+            {
+              "title": "Airports",
+              "link": "/pages/analytics/airport-analytics"
+            },
+            {
+              "title": "Operational Efficiency",
+              "link": "/pages/analytics/operational-efficiency-analytics"
+            },
+            {
+              "title": "Vendor Information",
+              "link": "/pages/analytics/vendor-information-analytics"
+            }
+          ]
+        }
+      ],
+      "permissions": [
+        {
+          "value": "all:superAdmin",
+          "description": "SuperAdmin complete access"
+        }
+      ],
+      "apiRoutes": ""
+    },
+    {
+      "name": "admin",
+      "displayName": "Admin",
+      "menus": [
+        {
+          "title": "Users",
+          "icon": "home-outline",
+          "children": [
+            {
+              "title": "Vendors",
+              "link": "/pages/users/vendors"
+            },
+            {
+              "title": "Delivery Agents",
+              "link": "/pages/users/delivery-agents"
+            },
+            {
+              "title": "Delivery Managers",
+              "link": "/pages/users/delivery-agent-managers"
+            }
+          ]
+        },
+        {
+          "title": "Payments",
+          "icon": "browser-outline",
+          "children": [
+            {
+              "title": "Manage Payments",
+              "link": "/pages/orders/payments"
+            }
+          ]
+        },
+        {
+          "title": "Orders",
+          "icon": "shopping-cart-outline",
+          "children": [
+            {
+              "title": "Live Orders",
+              "link": "/pages/orders/live-orders"
+            },
+            {
+              "title": "Past Orders",
+              "link": "/pages/orders/past-orders"
+            }
+          ]
+        },
+        {
+          "title": "Coupons",
+          "icon": "message-circle-outline",
+          "children": [
+            {
+              "title": "Manage Coupons",
+              "link": "/pages/orders/coupons"
+            }
+          ]
+        },
+        {
+          "title": "Rating",
+          "icon": "map-outline",
+          "children": [
+            {
+              "title": "Ratings",
+              "link": "/pages/orders/ratings"
+            }
+          ]
+        },
+        {
+          "title": "Alerts",
+          "icon": "shuffle-2-outline",
+          "children": [
+            {
+              "title": "Manage Alerts",
+              "link": "/pages/alerts"
+            }
+          ]
+        },
+        {
+          "title": "Queue",
+          "icon": "grid-outline",
+          "children": [
+            {
+              "title": "Manage Queue",
+              "link": "/pages/orders/manage-queue/null"
+            }
+          ]
+        },
+        {
+          "title": "Analytics",
+          "icon": "pie-chart-outline",
+          "children": [
+            {
+              "title": "Airports",
+              "link": "/pages/analytics/airport-analytics"
+            },
+            {
+              "title": "Operational Efficiency",
+              "link": "/pages/analytics/operational-efficiency-analytics"
+            },
+            {
+              "title": "Vendor Information",
+              "link": "/pages/analytics/vendor-information-analytics"
+            }
+          ]
+        }
+      ],
+      "permissions": [
+        {
+          "value": "all:admin",
+          "description": "Admin complete access"
+        }
+      ],
+      "apiRoutes": ""
+    },
+    {
+      "name": "daManager",
+      "displayName": "DA Manager",
+      "menus": [
+        {
+          "title": "Users",
+          "icon": "home-outline",
+          "children": [
+            {
+              "title": "Delivery Agents",
+              "link": "/pages/users/delivery-agents"
+            }
+          ]
+        },
+        {
+          "title": "Queue",
+          "icon": "grid-outline",
+          "children": [
+            {
+              "title": "Manage Queue",
+              "link": "/pages/orders/manage-queue/null"
+            }
+          ]
+        },
+        {
+          "title": "Payments",
+          "icon": "browser-outline",
+          "children": [
+            {
+              "title": "Manage Payments",
+              "link": "/pages/orders/payments"
+            }
+          ]
+        },
+        {
+          "title": "Alerts",
+          "icon": "shuffle-2-outline",
+          "children": [
+            {
+              "title": "Manage Alerts",
+              "link": "/pages/alerts"
+            }
+          ]
+        },
+        {
+          "title": "Orders",
+          "icon": "shopping-cart-outline",
+          "children": [
+            {
+              "title": "Live Orders",
+              "link": "/pages/orders/live-orders"
+            },
+            {
+              "title": "Past Orders",
+              "link": "/pages/orders/past-orders"
+            }
+          ]
+        },
+        {
+          "title": "Rating",
+          "icon": "map-outline",
+          "children": [
+            {
+              "title": "Ratings",
+              "link": "/pages/orders/ratings"
+            }
+          ]
+        },
+        {
+          "title": "Analytics",
+          "icon": "pie-chart-outline",
+          "children": [
+            {
+              "title": "Airport-analytics",
+              "link": "/pages/analytics/airport-analytics"
+            },
+            {
+              "title": "Operational Efficiency Analytics",
+              "link": "/pages/analytics/operational-efficiency-analytics"
+            },
+            {
+              "title": "Vendor POS Efficiency and GRAMMI Productivity Analytics",
+              "link": "/pages/analytics/vendor-efficiency-analytics"
+            },
+            {
+              "title": "Vendor Information Analytics",
+              "link": "/pages/analytics/vendor-information-analytics"
+            }
+          ]
+        }
+      ],
+      "permissions": [
+        {
+          "value": "all:daManager",
+          "description": "daManager restricted access"
+        }
+      ],
+      "apiRoutes": ""
+    },
+    {
+      "name": "vendor",
+      "displayName": "Vendor",
+      "menus": [
+        {
+          "title": "Profile",
+          "icon": "lock-outline",
+          "children": [
+            {
+              "title": "Profile Settings",
+              "link": "/pages/users/profile"
+            }
+          ]
+        },
+        {
+          "title": "Users",
+          "icon": "home-outline",
+          "children": [
+            {
+              "title": "Crew Members",
+              "link": "/pages/users/crew-members"
+            }
+          ]
+        },
+        {
+          "title": "Menu",
+          "icon": "grid-outline",
+          "children": [
+            {
+              "title": "Manage Menu",
+              "link": "/pages/menu/manage-menu"
+            }
+          ]
+        },
+        {
+          "title": "Orders",
+          "icon": "shopping-cart-outline",
+          "children": [
+            {
+              "title": "Live Orders",
+              "link": "/pages/orders/live-orders"
+            },
+            {
+              "title": "Past Orders",
+              "link": "/pages/orders/past-orders"
+            }
+          ]
+        }
+      ],
+      "permissions": [
+        {
+          "value": "all:vendor",
+          "description": "vendor restricted access"
+        }
+      ],
+      "apiRoutes": ""
+    },
+    {
+      "name": "deliveryAgent",
+      "displayName": "Delivery Agent",
+      "menus": [
+        {
+          "font_icon": "fa-user",
+          "sub": null,
+          "status": true,
+          "path": "/vendors",
+          "name": "deliveryManager"
+        }
+      ],
+      "permissions": [
+        {
+          "value": "all:deliveryAgent",
+          "description": "deliveryAgent restricted access"
+        }
+      ],
+      "apiRoutes": ""
+    },
+    {
+      "name": "crew",
+      "displayName": "Crew",
+      "menus": [
+        {
+          "font_icon": "fa-user",
+          "sub": null,
+          "status": true,
+          "path": "/vendors",
+          "name": "deliveryManager"
+        }
+      ],
+      "permissions": [
+        {
+          "value": "all:crew",
+          "description": "crew restricted access"
+        }
+      ],
+      "apiRoutes": ""
+    }
+  ],
+  "currencies": {
+    "name": "USD",
+    "symbol": "$"
+  },
+  "venues": {
+    "type" : "Airport",
+    "name" : "Detroit Metro",
+    "address" : "Airport",
+    "logoUrl" : "airport.com",
+    "currency" : "Dollar",
+    "mediaId" : "5db29dc10c7627001252a9b8",
+    "currencySymbol" : "$",
+    "tax" : "6%" ,
+    "packingCharge" : "1$",
+    "deliveryCharge" : "1$"
+  }
+}

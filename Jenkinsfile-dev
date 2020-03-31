@@ -1,0 +1,53 @@
+node {
+  
+     stage ('Checkout SCM'){
+    // mattermostSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+     mattermostSend "${env.JOB_NAME}-# ${env.BUILD_NUMBER} :pray: Started By Changes from ${env.GIT_COMMITTER_NAME} (<${env.BUILD_URL}|Open>)"
+     git ' git@bitbucket.org:amt/grammi-api.git'
+    }     
+     stage ('Docker build'){
+     docker.build('grammi-api:dev-$JOB_NAME')
+    }
+    stage ('Docker push'){
+    docker.withRegistry('https://443817220012.dkr.ecr.us-east-2.amazonaws.com/grammi-api' , 'ecr:us-east-2:aws-ecr') {
+    docker.image('grammi-api:dev-$JOB_NAME').push('dev-$JOB_NAME')
+     }
+    }
+    
+    stage ('Clone devops-dev '){
+        git 'git@bitbucket.org:amt/grammi-devops-dev.git'
+     }
+     
+     stage ('Deploy to Kubernetes'){
+        dir("apps/$JOB_NAME") 
+        {
+   		kubernetesDeploy (
+		configs: 'api-secrets.yaml,api-deploy.yaml,api-svc.yaml',
+		kubeconfigId: 'k8s',
+		secretName: 'aws-ecr-test', 
+		secretNamespace: 'dev',
+		enableConfigSubstitution: 'true',        
+        dockerCredentials: [[url: 'https://443817220012.dkr.ecr.us-east-2.amazonaws.com' , credentialsId: 'ecr:us-east-2:aws-ecr']]
+
+		)
+        
+        }
+        }
+        
+    stage ('Deployment Status'){
+        withKubeConfig([credentialsId: '1b354387-5eb5-4e68-b461-a1a7c5abcd1d', serverUrl: 'https://kubernetes.default'])        
+          { 
+            sh 'kubectl rollout status deployment ${JOB_NAME}-deployment '
+            sh 'kubectl get pods -l=app=${JOB_NAME} '
+           }
+           }
+      post {
+
+          always {
+
+                 mattermostSend color: 'good', message: 'Message from Jenkins Pipeline', text: 'optional for @here mentions and searchable text'
+
+                  }
+            }
+     
+}
