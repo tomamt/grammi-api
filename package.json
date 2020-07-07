@@ -48,7 +48,7 @@
     "mongoose": "^5.7.3",
     "node-uuid": "^1.4.8",
     "nodemon": "^1.19.4",
-    "npm": "^6.13.7",
+    "npm": "^6.14.6",
     "randomcolor": "^0.5.4",
     "redis": "^2.8.0",
     "s3-upload-stream": "^1.0.7",
